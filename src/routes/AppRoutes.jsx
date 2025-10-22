@@ -18,6 +18,8 @@ import Blog from "../Pages/subreview/Blog.jsx"
 import Viewer from "../Pages/Home/viewer.jsx";
 import Contact from "../Pages/Home/contact.jsx";
 import Diagram from "../Pages/Home/diagram.jsx";
+import Sour from "../Pages/Home/sour.jsx"
+import Cere from "../Pages/Home/cere.jsx"
 
 
 // Create a Home page component that includes both Header and Overview
@@ -29,7 +31,10 @@ const HomePage = () => {
       <Explain />
       <Diagram />
       <Others />
+      
       <Viewer />
+      <Sour />
+      <Cere />
     </>
   );
 };

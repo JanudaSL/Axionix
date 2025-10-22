@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import { 
-  Users, 
+  User, 
   Award, 
   Leaf, 
   Target,
   Globe,
-  Heart
+  Heart,
+  Code
 } from 'lucide-react';
 
 export default function About() {
   const [activeCard, setActiveCard] = useState(null);
 
-  const teamStats = [
-    { icon: Users, label: "Team Members", value: "4", color: "text-blue-600" },
+  const projectStats = [
+    { icon: User, label: "Developer", value: "Januda", color: "text-blue-600" },
     { icon: Target, label: "Focus Area", value: "Ballerina", color: "text-purple-600" },
     { icon: Leaf, label: "Platform Built", value: "EcoGreen360", color: "text-emerald-600" }
   ];
@@ -24,11 +25,11 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-r from-gray-200/30 to-gray-300/30"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            About Our
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-800"> Team</span>
+            About This
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-800"> Project</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We are a passionate group of undergraduate students dedicated to creating sustainable solutions through innovative technology.
+            A personal initiative dedicated to creating sustainable solutions through innovative technology and environmental awareness.
           </p>
         </div>
       </section>
@@ -37,7 +38,7 @@ export default function About() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamStats.map((stat, index) => (
+            {projectStats.map((stat, index) => (
               <div 
                 key={index}
                 className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-gray-100"
@@ -60,19 +61,48 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Journey & Vision
+              My Journey & Vision
             </h2>
             <div className="space-y-6">
               <p className="text-lg text-gray-600 leading-relaxed">
-                As undergraduate students, we came together with a shared vision of creating meaningful environmental impact through innovation.
+                As an undergraduate student, I embarked on this project with a vision of creating meaningful environmental impact through innovation.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Our focus on <span className="font-semibold text-green-600">Ballerina</span> programming language 
-                led us to develop comprehensive solutions designed to promote sustainable practices and environmental awareness.
+                My focus on the <span className="font-semibold text-green-600">Ballerina</span> programming language 
+                led me to develop comprehensive solutions designed to promote sustainable practices and environmental awareness.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We believe that technology should serve a greater purpose, and our mission is to leverage 
-                our skills to build solutions that benefit both businesses and the environment.
+                I believe that technology should serve a greater purpose, and my mission is to leverage 
+                my skills to build solutions that benefit both businesses and the environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+              <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+              <p className="text-gray-600">
+                Leveraging modern technology to create impactful solutions
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center">
+              <Globe className="w-12 h-12 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Sustainability</h3>
+              <p className="text-gray-600">
+                Promoting eco-friendly practices and environmental awareness
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
+              <Heart className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Passion</h3>
+              <p className="text-gray-600">
+                Driven by dedication to make a positive difference
               </p>
             </div>
           </div>

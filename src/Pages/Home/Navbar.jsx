@@ -104,7 +104,7 @@ export default function Navbar() {
                   : 'text-gray-700 hover:text-blue-600'
               } ${isScrolled ? 'hover:text-blue-500' : 'hover:text-blue-600'}`}
             >
-              ABOUT US
+              ABOUT
             </Link>
             
             <Link

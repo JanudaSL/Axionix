@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Menu, Search, User, Globe, Play } from 'lucide-react';
-import eco from '../Home/images/eco36.png';
+import eco from '../Home/images/eco37.png';
 import eco1 from '../Home/images/gr1.jpg';
 import eco2 from '../Home/images/gr2.jpg';
 

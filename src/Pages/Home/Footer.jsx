@@ -1,10 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
-  ArrowUp
+  ArrowUp,
+  ExternalLink
 } from 'lucide-react';
 import axionixLogo from '../Home/images/axi.png';
 
 export default function Footer() {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    // Update year when component mounts
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -56,7 +64,19 @@ export default function Footer() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-gray-600 text-sm text-center md:text-left">
-                <p>© 2025 AXIONIX | DESIGNED BY Axionix@JK.</p>
+                <p className="mb-1">© {currentYear} AXIONIX. All rights reserved.</p>
+                <p className="flex items-center justify-center md:justify-start gap-1.5 text-xs">
+                  <span>Project, Idea & Design by</span>
+                  <a 
+                    href="https://kjanuda.netlify.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-semibold text-blue-600 hover:text-blue-700 inline-flex items-center gap-1 transition-colors duration-200 group"
+                  >
+                    Januda Janandith
+                    <ExternalLink size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                  </a>
+                </p>
               </div>
               
               {/* Back to Top Button */}
