@@ -20,6 +20,7 @@ import Contact from "../Pages/Home/contact.jsx";
 import Diagram from "../Pages/Home/diagram.jsx";
 import Sour from "../Pages/Home/sour.jsx"
 import Cere from "../Pages/Home/cere.jsx"
+import Cert from "../Pages/Home/cert.jsx"
 
 
 // Create a Home page component that includes both Header and Overview
@@ -34,6 +35,7 @@ const HomePage = () => {
       
       <Viewer />
       <Sour />
+       <Cert />
       <Cere />
     </>
   );
